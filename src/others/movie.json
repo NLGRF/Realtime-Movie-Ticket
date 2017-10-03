@@ -1,0 +1,32 @@
+{
+    "movies": [
+        { "id": "hp1" },
+        { "id": "hp2" },
+        { "id": "hp3" },
+        { "id": "hp4" },
+        { "id": "hp5" },
+        { "id": "hp6" },
+        { "id": "hp7.1" },
+        { "id": "hp7.2" }
+    ],
+    "hp1": [
+        { "id":"A1", "seated": true, "price": 120},
+        { "id":"A2", "seated": false, "price": 120},
+        { "id":"A3", "seated": false, "price": 120},
+        { "id":"A4", "seated": false, "price": 120},
+        { "id":"A5", "seated": false, "price": 120},
+        { "id":"A6", "seated": false, "price": 120},
+        { "id":"B1", "seated": true, "price": 200},
+        { "id":"B2", "seated": false, "price": 200}
+    ],
+    "hp2": [
+        { "id":"A1", "seated": false, "price": 120},
+        { "id":"A2", "seated": false, "price": 120},
+        { "id":"A3", "seated": false, "price": 120},
+        { "id":"A4", "seated": false, "price": 120},
+        { "id":"A5", "seated": false, "price": 120},
+        { "id":"A6", "seated": false, "price": 120},
+        { "id":"B1", "seated": false, "price": 200},
+        { "id":"B2", "seated": false, "price": 200}
+    ]
+}
