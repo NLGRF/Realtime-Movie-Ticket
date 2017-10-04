@@ -2,8 +2,11 @@
     <div class="box">
         <h3 class="title">Movie</h3>
         <div class="columns">
-            <div v-for="m in movies" class="column">
-            <img src="/movies/hp7.1.jpg" alt=""> 
+            <div v-for="m in movies" class="column pointer" @click="chooseMovie()">
+            <!-- <img src="/movies/hp7.1.jpg" alt=""> -->
+            <figure class="image">
+                <img :src="imgSrc(m.id)">
+            </figure>
             </div>
         </div>
     </div>
@@ -19,9 +22,22 @@
             return{
                 movies
             }
+        },
+        methods: {
+            imgSrc(movieId) {
+                return `/movies/${ movieId }.jpg`
+            },
+            chooseMovie() {
+                console.log('OK')
+              // this.$emit('chooseMovie', movieId)
+
+            }
         }
-
-
     }
 </script>
 <!---->
+<style>
+.pointer{
+    cursor:pointer
+}
+</style>
