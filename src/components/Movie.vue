@@ -1,8 +1,8 @@
 <template>
     <div class="box">
-       <!-- <h3 class="title">Movie</h3> -->
+        <h3 class="title">{{ movieId }}</h3> 
         <div class="columns">
-            <div v-for="m in movies" class="column pointer" @click="chooseMovie(m.id)">
+            <div v-for="m in movies" :class="className(m.id)" @click="chooseMovie(m.id)">
             <figure class="image">
                 <!-- <img src="/movies/hp7.1.jpg" alt=""> -->
                 <img :src="imgSrc(m.id)">
@@ -18,8 +18,9 @@
    // console.log(movies)
    
     export default {
-        data(){
-            return{
+        props: [ 'movieId' ],
+        data() {
+            return {
                 movies
             }
         },
@@ -27,10 +28,19 @@
             imgSrc(movieId) {
                 return `/movies/${ movieId }.jpg`
             },
-            chooseMovie() {
+            chooseMovie(movieId) {
               //  console.log('OK')
                this.$emit('chooseMovie', movieId)
+            },
+            className(movieId) {
+                return [
+                    'column', 'pointer',
+                    { 'chosen': this.movieId === movieId}
+                ]
             }
+        },
+        mounted() {
+            this.chooseMovie(movies[0].id)
         }
     }
 </script>
@@ -38,5 +48,9 @@
 <style>
 .pointer{
     cursor:pointer;
+}
+
+.chosen {
+    border-style:solid;
 }
 </style>

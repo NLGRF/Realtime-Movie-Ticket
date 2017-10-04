@@ -1,7 +1,7 @@
 <template>
     <div class="box">
-        <h3 class="title">App</h3>
-        <movie @chooseMovie="handleChooseMovie" />
+        <h3 class="title">App: {{ movieId }}</h3>
+        <movie @chooseMovie="handleChooseMovie" :movieId="movieId" />
     </div>
 </template>
 
@@ -10,15 +10,15 @@
 
     export default {
         components : { Movie },
-/*        data(){
+        data(){
             return {
                 movieId: ''
             }
-        },*/
+        },
         methods: {
-            handleChooseMovie() {
-                console.log('OK')
-               // this.movieId = movieId
+            handleChooseMovie(movieId) {
+               // console.log('OK')
+                this.movieId = movieId
             }
         }
     }
