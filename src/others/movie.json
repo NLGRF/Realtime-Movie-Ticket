@@ -1,15 +1,15 @@
 {
     "movies": [
-        { "id": "hp1" },
-        { "id": "hp2" },
-        { "id": "hp3" },
-        { "id": "hp4" },
-        { "id": "hp5" },
-        { "id": "hp6" },
-        { "id": "hp7.1" },
-        { "id": "hp7.2" }
+        { "id": "Harry Potter 1" },
+        { "id": "Harry Potter 2" },
+        { "id": "Harry Potter 3" },
+        { "id": "Harry Potter 4" },
+        { "id": "Harry Potter 5" },
+        { "id": "Harry Potter 6" },
+        { "id": "Harry Potter 7.1" },
+        { "id": "Harry Potter 7.2" }
     ],
-    "hp1": [
+    "Harry Potter 1": [
         { "id":"A1", "seated": true, "price": 120},
         { "id":"A2", "seated": false, "price": 120},
         { "id":"A3", "seated": false, "price": 120},
@@ -19,7 +19,7 @@
         { "id":"B1", "seated": true, "price": 200},
         { "id":"B2", "seated": false, "price": 200}
     ],
-    "hp2": [
+    "Harry Potter 2": [
         { "id":"A1", "seated": false, "price": 120},
         { "id":"A2", "seated": false, "price": 120},
         { "id":"A3", "seated": false, "price": 120},
